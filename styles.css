@@ -7,6 +7,11 @@ body {
   line-height: 1.6;
 }
 
+/* Make all headings white */
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+}
+
 /* Navigation Bar */
 .navbar ul {
   list-style: none;
@@ -55,7 +60,7 @@ section {
 }
 
 .service-card {
-  background-color: #111; /* slightly lighter than black */
+  background-color: #111;
   padding: 20px 30px;
   border-radius: 10px;
   transition: 0.3s;
@@ -106,6 +111,11 @@ button:hover {
 /* Portfolio Section */
 #portfolio p {
   font-style: italic;
+}
+
+/* Smooth scrolling for single page */
+html {
+  scroll-behavior: smooth;
 }
 
 /* Responsive */
