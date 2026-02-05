@@ -1,33 +1,52 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meekael Mandviya</title>
+  <title>Services - Meekael Mandviya</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Top Navigation -->
+<header>
   <nav class="navbar">
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <!-- Home link forces full reload so the photo always shows -->
+      <li><a href="index.html" onclick="window.location.href='index.html';">Home</a></li>
+      <li><a class="active" href="services.html">Services</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
+</header>
 
-  <!-- Home Content -->
-  <section class="home">
-    <h1>Meekael Mandviya</h1>
-     <img src="meekael.jpg.JPG" alt="Meekael Mandviya" class="about-pic">
-    <p>my name is Meekael Mandviya, and I’m from Markham, Ontario. I’m a Business Technology Management student at Toronto Metropolitan University with a strong interest in IT project management. Explore my portfolio and get in touch to collaborate or learn more about my work</p>
+<main>
+  <section id="services">
+    <h2 class="section-title">My Services</h2>
+
+    <div class="services-container">
+      <div class="service-card">
+        <a href="contact.html">Project Management</a>
+      </div>
+
+      <div class="service-card">
+        <a href="contact.html">Consulting</a>
+      </div>
+
+      <div class="service-card">
+        <a href="contact.html">3D Modelling</a>
+      </div>
+
+      <div class="service-card">
+        <a href="contact.html">Website Creation</a>
+      </div>
+    </div>
   </section>
+</main>
 
 </body>
 </html>
+
 
 
  
