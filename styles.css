@@ -125,3 +125,25 @@ html {
     gap: 15px;
   }
 }
+/* Social Links under bio */
+.social-links {
+  margin-top: 15px;
+  /* No text-align, so it stays left-aligned */
+}
+
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 20px;  /* space between LinkedIn and Instagram */
+  transition: color 0.3s;
+  font-size: 18px;
+}
+
+.social-links a i {
+  margin-right: 8px;  /* space between icon and text */
+}
+
+.social-links a:hover {
+  color: #ccc;  /* subtle hover effect */
+}
