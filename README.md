@@ -18,9 +18,8 @@ Cloud migrations are approached using the industry-standard **7 Rs framework** t
 
 ## Technologies Used
 
-- HTML5
-- CSS3
-- JavaScript
+- HTML
+- CSS
 - AOS (Animate On Scroll)
 - Google Calendar Appointment Scheduling
 
