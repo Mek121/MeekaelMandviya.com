@@ -12,7 +12,7 @@ Mandviya Systems is a modern web development and cloud migration business focuse
 
 ## About
 
-Mandviya Systems operates as a lean, AI-assisted business focused on practical execution, efficient workflows, and modern digital solutions.
+Mandviya Systems focuses on practical execution, efficient workflows, and modern digital solutions for businesses.
 
 Cloud migrations are approached using the industry-standard **7 Rs framework** to determine the best migration strategy for each system and workload.
 
