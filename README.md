@@ -50,4 +50,4 @@ https://www.instagram.com/meekael_mandviya
 
 ## Disclaimer
 
-Pricing, timelines, and project scope vary depending on technical requirements and business needs. Discovery calls are used to determine the best approach for each project.
+Pricing, timelines, and project scope vary depending on technical requirements and business needs. Discovery calls are used to determine the best approach for each project
