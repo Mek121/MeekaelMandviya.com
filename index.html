@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mandviya Systems</title>
 
-  <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
 
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
@@ -23,7 +22,7 @@
       <li><a href="pricing.html">Pricing</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
-      </li> <button id="theme-toggle" class="theme-toggle">Light Mode</button> </li>
+      <li><button id="theme-toggle" class="theme-toggle">Light Mode</button></li>
     </ul>
   </nav>
 </header>
@@ -45,30 +44,97 @@
   <a href="services.html" class="cta-button">Explore Services</a>
 
 </section>
-    <script>
-  const toggle = document.getElementById("theme-toggle");
 
-  if (localStorage.getItem("theme") === "light") {
-    document.body.classList.add("light-mode");
-    if (toggle) toggle.textContent = "Dark Mode";
-  }
+<section id="calculator">
 
-  if (toggle) {
-    toggle.addEventListener("click", () => {
-      document.body.classList.toggle("light-mode");
+  <h2>Cost Savings Calculator</h2>
 
-      if (document.body.classList.contains("light-mode")) {
-        localStorage.setItem("theme", "light");
-        toggle.textContent = "Dark Mode";
-      } else {
-        localStorage.setItem("theme", "dark");
-        toggle.textContent = "Light Mode";
-      }
-    });
-  }
-  </script>
+  <p>
+    Estimate how much your business could save by reducing system costs and manual work.
+  </p>
 
+  <div class="calc-group">
+    <label>Current Monthly Cost: $<span id="currentCostValue">500</span></label>
+    <input type="range" id="currentCost" min="0" max="10000" step="50" value="500">
+  </div>
 
+  <div class="calc-group">
+    <label>Optimized Monthly Cost: $<span id="newCostValue">250</span></label>
+    <input type="range" id="newCost" min="0" max="10000" step="50" value="250">
+  </div>
+
+  <div class="calc-group">
+    <label>Hours Saved Per Month: <span id="hoursSavedValue">6</span></label>
+    <input type="range" id="hoursSaved" min="0" max="200" step="1" value="6">
+  </div>
+
+  <div class="calc-group">
+    <label>Hourly Cost: $<span id="hourlyRateValue">35</span></label>
+    <input type="range" id="hourlyRate" min="0" max="150" step="5" value="35">
+  </div>
+
+  <button onclick="calculateSavings()">Calculate Savings</button>
+
+  <div id="result"></div>
+
+</section>
+
+<script>
+const sliders = ["currentCost", "newCost", "hoursSaved", "hourlyRate"];
+
+sliders.forEach(id => {
+  const slider = document.getElementById(id);
+  const output = document.getElementById(id + "Value");
+
+  slider.addEventListener("input", () => {
+    output.textContent = slider.value;
+  });
+});
+
+function calculateSavings() {
+  const current = Number(document.getElementById("currentCost").value);
+  const optimized = Number(document.getElementById("newCost").value);
+  const hours = Number(document.getElementById("hoursSaved").value);
+  const rate = Number(document.getElementById("hourlyRate").value);
+
+  const monthly = (current - optimized) + (hours * rate);
+  const yearly = monthly * 12;
+
+  const result = document.getElementById("result");
+
+  result.innerHTML =
+    "<strong>Potential Monthly Savings:</strong> $" + monthly.toFixed(0) +
+    "<br><strong>Potential Annual Savings:</strong> $" + yearly.toFixed(0) +
+    "<br><br><strong>What this means:</strong> Your business could potentially save about $" +
+    monthly.toFixed(0) + " each month and $" +
+    yearly.toFixed(0) + " per year by lowering costs and improving efficiency.";
+
+  result.classList.add("show");
+}
+</script>
+
+<script>
+const toggle = document.getElementById("theme-toggle");
+
+if (localStorage.getItem("theme") === "light") {
+  document.body.classList.add("light-mode");
+  if (toggle) toggle.textContent = "Dark Mode";
+}
+
+if (toggle) {
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+
+    if (document.body.classList.contains("light-mode")) {
+      localStorage.setItem("theme", "light");
+      toggle.textContent = "Dark Mode";
+    } else {
+      localStorage.setItem("theme", "dark");
+      toggle.textContent = "Light Mode";
+    }
+  });
+}
+</script>
 
 </body>
 </html>
