@@ -410,3 +410,14 @@ body.light-mode summary {
 body.light-mode a:not(.cta-button) {
   color: #111;
 }
+body.light-mode .pricing-card:hover {
+  background: #eef4ff;
+  border-color: rgba(37, 99, 235, 0.35);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.18);
+  transform: translateY(-5px);
+}body.light-mode .service-card:hover {
+  background: #eef4ff;
+  border-color: rgba(37, 99, 235, 0.35);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.18);
+  transform: translateY(-5px);
+}
